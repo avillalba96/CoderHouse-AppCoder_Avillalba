@@ -1,20 +1,6 @@
 # leeme.md
 
-## INSTALACION INICIAL
-
-- Creamos el proyecto y la aplicacion
-
-```bash
-django-admin startproject AppCoder_Avillalba
-cd AppCoder_Avillalba
-python manage.py startapp MiSitio
-```
-
-- Ejecutamos el sitio
-
-```bash
-python manage.py runserver
-```
+## TEMPORAL
 
 - Editamos los archivos necesarios en el orden indicado si queremos agregar mas modulos
 
