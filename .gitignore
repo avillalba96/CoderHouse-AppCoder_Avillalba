@@ -1,0 +1,30 @@
+# .gitignore
+
+# Entornos virtuales
+venv/
+env/
+
+# Archivos de configuración específicos de Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Archivos de configuración de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Carpeta de medios
+media/
+
+# Archivos de configuración local
+local_settings.py
+
+# Archivos generados por el sistema
+*.pyc
+*.pyo
+*.db
+# *.sqlite3
+*.log
+*.pot
+*.pyc
+__pycache__/
