@@ -1,0 +1,24 @@
+{% extends 'MiSitio/base.html' %}
+
+{% block title %}Inicio - MiSitio{% endblock %}
+
+{% block content %}
+    <h2>Bienvenido a MiSitio</h2>
+
+    <form method="get" action="{% url 'buscar_cursos' %}">
+        <label for="numero_camada">Buscar por número de camada:</label>
+        <input type="text" id="numero_camada" name="numero_camada" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if cursos %}
+        <p>Hay cursos disponibles en la base de datos:</p>
+        <ul>
+            {% for curso in cursos %}
+                <li>{{ curso.nombre }} - Camada: {{ curso.numero_camada }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay cursos en la base de datos.</p>
+    {% endif %}
+{% endblock %}

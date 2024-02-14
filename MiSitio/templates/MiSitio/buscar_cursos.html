@@ -1,0 +1,19 @@
+{% extends 'MiSitio/base.html' %}
+
+{% block title %}Resultados de búsqueda - MiSitio{% endblock %}
+
+{% block content %}
+    <h2>Resultados de búsqueda</h2>
+
+    <p>Resultados para el número de camada: {{ numero_camada }}</p>
+
+    {% if cursos %}
+        <ul>
+            {% for curso in cursos %}
+                <li>{{ curso.nombre }} - Camada: {{ curso.numero_camada }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron cursos para el número de camada especificado.</p>
+    {% endif %}
+{% endblock %}

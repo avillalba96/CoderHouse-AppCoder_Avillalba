@@ -1,0 +1,16 @@
+{% extends 'MiSitio/base.html' %}
+
+{% block title %}Agregar Estudiantes - MiSitio{% endblock %}
+
+{% block content %}
+    <h2>Agregar Estudiantes</h2>
+    <form method="post" action="{% url 'agregar_estudiantes' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+
+    {% if error_message %}
+        <p class="error-message">{{ error_message }}</p>
+    {% endif %}    
+{% endblock %}

@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}MiSitio{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'MiSitio/css/styles.css' %}">
+</head>
+<body>
+    <div class="menu">
+        <a href="{% url 'inicio' %}" {% if request.path == '/inicio/' %}class="active"{% endif %}>Inicio</a>
+        <a href="{% url 'agregar_profesor' %}" {% if request.path == '/agregar_profesor/' %}class="active"{% endif %}>Agregar Profesor</a>
+        <a href="{% url 'agregar_curso' %}" {% if request.path == '/agregar_curso/' %}class="active"{% endif %}>Agregar Curso</a>
+        <a href="{% url 'agregar_estudiantes' %}" {% if request.path == '/agregar_estudiantes/' %}class="active"{% endif %}>Agregar Estudiantes</a>
+        <a href="{% url 'admin:index' %}">Panel de Administración</a>
+    </div>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
